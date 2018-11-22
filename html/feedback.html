@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Feedback</title>
+<link href="../css/a2.css" rel="stylesheet">
+</head>
+<body>
+<div class="flex-container">
+    <header>
+        <h1>Spring Escape</h1>
+        <img class="logo" src="../images/logo.svg" alt="Logo" />
+    </header>
+    <nav>
+        <div id="hamburger">        
+            <input type="checkbox" id="checkit">
+            <ul id="check_menu">
+                <li><a href="../index.html" onClick="unCheckIt()">HOME</a></li>
+                <li><a href="../html/reviews.html" onClick="unCheckIt()">REVIEWS</a></li>
+                <li><a href="../html/feedback.html" onClick="unCheckIt()">FEEDBACK</a></li>
+                <li><a href="../html/contact.html" onClick="unCheckIt()">CONTACT</a></li>
+            </ul>        
+        </div>
+
+        <div class="menuItem"><a href="../index.html">HOME</a></div>
+        <div class="menuItem"><a href="../html/reviews.html">REVIEWS</a></div>
+        <div class="menuItem"><a href="../html/feedback.html">FEEDBACK</a></div>
+        <div class="menuItem"><a href="../html/contact.html">CONTACT</a></div>
+        <div class="menuItem"><a href="../html/sponsors.html">SPONSORS</a></div>
+    </nav>
+    <article><h2>Feedback Form</h2>
+        <form>
+            <div class="row">
+                <div class="labels">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="inputs">
+                    <input type="text" id="fname" name="firstname">
+                </div>
+            </div>
+            <div class="row">
+                <div class="labels">
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="inputs">
+                    <input type="text" id="lname" name="lastname">
+                </div>
+            </div>
+            <div class="row">
+                <div class="labels">
+                    <label>Gender</label>
+                </div>
+                <div class="inputs">
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="female">Female
+                </div>
+            </div>
+            <div class="row">
+                <div class="labels">
+                    <label for="country">Country</label>
+                </div>
+                <div class="inputs">
+                    <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="nz">New Zealand</option>
+                    <option value="uk">UK</option>  
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="labels">
+                    <label for="subject">Comments</label>
+                </div>
+                <div class="inputs">
+                    <textarea id="subject" name="subject"  style="height:200px"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="labels">
+                    <label>Agree</label>
+                </div>
+                <div class="inputs">
+                    <br><input type="checkbox" name="agree" checked>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>        
+    </article>
+    <div class="contentRight"> 
+        <div class="sides">
+            <img class="thumbnail" src="../images/london.jpeg" alt="" />
+            <p><strong>Top Destination No.1</strong></p>      
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...</p>
+        </div>
+        <div class="sides">
+            <img class="thumbnail" src="../images/sydney.jpeg" alt="" />
+            <p><strong>Top Destination No.2</strong></p>      
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...</p>
+        </div>
+        <div class="sides">
+            <img class="thumbnail" src="../images/paris.jpeg" alt="" />
+            <p><strong>Top Destination No.3</strong></p>      
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...</p>
+        </div>
+        <div class="ad">
+            <a href="../html/sponsors.html">
+                <img class="thumbnail" src="../images/ad.jpg" alt="" />
+            </a>
+            <p><strong>Sponsors</strong></p>            
+        </div>
+    </div>
+    <footer>
+        <p>2018 Spring Escape All Rights Reserved</p>
+    </footer>
+</div>
+</body>
+</html>

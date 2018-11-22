@@ -1,0 +1,635 @@
+@charset "utf-8";
+
+/*CXZ=====================================
+    PART B: APPLY DOWNLOADED WEB FONT
+=====================================CXZ*/
+
+@font-face {
+    font-family: ribeyeMarrow;
+    src: url(../fonts/ribeyemarrow.ttf);
+}
+
+h2 {
+    font-family: ribeyeMarrow;        
+} 
+
+/*CXZ===================================
+    OVERALL STRUCTURE STARTS HERE
+===================================CXZ*/
+
+html, body, div, span, header, section, nav, article, aside,
+footer, p, h1, h2, h3, h4{
+    border:0; margin:0; padding:0
+} /* MINI CSS RESET CXZ*/
+
+html{
+    font-family: arial;
+    font-size:18px; /* EQUAL TO 100% OR 1EM CXZ*/    
+}
+
+.flex-container{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+        flex-wrap:wrap;
+    width:80%;
+    min-height:100%;
+    margin:0 auto;    
+    background-image:url(../images/background.jpg);
+    background-size: cover;
+    background-position: center;    
+}
+
+h1 {
+    display: none; /*HEADER TEXT IS HIDDEN AND REPLACED BY LOGO IMAGE. CXZ*/
+} 
+
+
+
+/*CXZ==============================
+        HOME PAGE STARTS HERE
+==============================CXZ*/
+
+header {
+    color: white;
+    width:100%;
+    min-height:10em;
+    height: 20%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    background-image:url(../images/header.jpg);
+    background-size: cover;
+    background-position: center;
+}
+nav {
+    width:100%;
+    min-height:3em;
+    background-color: rgba(245, 248, 235, 0.65); 
+    -webkit-box-ordinal-group: 3; 
+        -ms-flex-order: 2; 
+            order: 2;
+}
+
+#hamburger {
+    display:none;
+}
+
+.menuItem{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width:16%;
+    margin-left:2%;
+    margin-right:2%;
+    margin-top: 15px;
+    border-radius:10px;
+    height:3em;
+    float:left;
+    background: -webkit-gradient(linear, left top, left bottom, from(green), to(lightgrey));
+    background: -webkit-linear-gradient(green, lightgrey);
+    background: -o-linear-gradient(green, lightgrey);
+    background: linear-gradient(green, lightgrey);
+    color:black;
+    
+    -webkit-transition: background 1s, font-size 1s, border-radius 1s, -webkit-transform 1s;
+    
+    transition: background 1s, font-size 1s, border-radius 1s, -webkit-transform 1s;
+    
+    -o-transition: transform 1s, background 1s, font-size 1s, border-radius 1s;
+    
+    transition: transform 1s, background 1s, font-size 1s, border-radius 1s;
+    
+    transition: transform 1s, background 1s, font-size 1s, border-radius 1s, -webkit-transform 1s;
+}
+
+.menuItem:hover{
+    background: yellowgreen; 
+    -webkit-transform: scale(1.1, 1.2); 
+        -ms-transform: scale(1.1, 1.2); 
+            transform: scale(1.1, 1.2);
+    border-radius: 10px;
+    color: black;
+}
+
+a:link, a:visited{
+    color:black;
+    text-decoration: none;
+}
+
+article{
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 70%;
+            flex: 1 70%;
+    min-height: auto;
+    background-color: rgba(245, 248, 235, 0.65);  /*filter applied to the background image, good for text reading*/
+}
+
+
+article p {
+    font-size: 1em;         
+    padding: 10px;
+    text-align: center;
+}
+
+article section {
+    font-size: 1em;         
+    padding: 10px;
+    text-align: center;
+}
+
+/*CXZ=================================
+    PART:C HOMEPAGE EMBEDED VIDEO
+=================================CXZ*/
+
+iframe {
+    margin: 5%;
+    width: 90%;
+    min-height: 540px;
+    border:none;
+}
+
+
+.contentRight {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 30%;
+            flex: 1 30%;
+    background-color: rgba(245, 248, 235, 0.65);
+}
+.sides {
+    min-height: 8em;   
+    margin-top: 20px; 
+    width:100%;   
+    float: right;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    background-color: rgb(225, 248, 225);
+    padding: 10px;
+}
+.ad {
+    min-height: 8em; 
+    margin: 20px 0 ;
+    width: 100%;   
+    float: right;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    background-color: rgb(225, 248, 225);
+    padding: 10px;
+}
+.thumbnail {
+    height: 100px;
+    width: 100px;
+    float: right;
+}
+
+footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color:black;
+    width: 100%;
+    height:3em;
+    -webkit-box-ordinal-group:6;
+        -ms-flex-order:5;
+            order:5;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background: -webkit-gradient(linear,left top, left bottom,from(lightgrey),to(green));
+    background: -webkit-linear-gradient(lightgrey,green);
+    background: -o-linear-gradient(lightgrey,green);
+    background: linear-gradient(lightgrey,green);
+}
+
+/*CXZ=================================
+        REVIEW PAGE STARTS HERE
+=================================CXZ*/
+
+.destinations {
+    border: 2px solid rgb(122, 139, 26);
+    border-radius: 15px;
+    width: 98%;
+    padding:10px;
+    margin: 20px 20px 20px 0;
+    overflow: auto;    
+}
+.destimg {
+    float: left;
+    margin-right: 50px;
+    width:200px;
+    height:200px;
+}
+aside {
+    font-size: 1em; 
+    text-align: left;
+}
+
+/*CXZ=================================
+    FEEDBACK FORM STARTS HERE
+=================================CXZ*/
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+form {
+    border-radius: 5px;
+    height:100%;
+}
+
+.labels {
+    float: left;
+    width: 20%;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.inputs {
+    float: left;
+    width: 80%;
+}
+
+label {
+    padding: 18px 0 18px 0;
+    width:100%;
+    display: inline-block;
+}
+
+input[type=text], select, textarea {
+    font-size:1em;
+    width: 90%;
+    padding: 5px;
+    margin: 12px 5%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=radio] {
+    margin: 20px 5%;
+}
+
+input[type=checkbox] {
+    margin: 0 5%;
+}
+
+input[type=submit] {
+    background-color: grey;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    float: right;
+    right: 5%;
+    -webkit-transition: background 1s, font-size 1s, -webkit-transform 1s;
+    transition: background 1s, font-size 1s, -webkit-transform 1s;
+    -o-transition: background 1s, transform 1s, font-size 1s;
+    transition: background 1s, transform 1s, font-size 1s;
+    transition: background 1s, transform 1s, font-size 1s, -webkit-transform 1s;
+}
+
+input[type=submit]:hover {
+    background-color: green;
+    -webkit-transform: scale(1.2,1.2);
+        -ms-transform: scale(1.2,1.2);
+            transform: scale(1.2,1.2);
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both; /* Clear floats after the columns */
+}
+
+/*CXZ=================================
+        CONTACT PAGE STARTS HERE
+=================================CXZ*/
+
+article h2 {
+    font-size: 3em;         
+    padding: 20px;
+    text-align: center;
+}
+article p {
+    font-size: 1.2em;         
+    padding: 10px;
+    text-align: center;
+}
+
+
+/*CXZ=================================
+    SPONSORS PAGE STARTS HERE
+=================================CXZ*/
+
+/*CXZ=================================
+    PART D: ADVERTISEMENT BANNERS
+=================================CXZ*/
+
+
+#ad1 {
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+    font-size:1.5em;
+    background-image:url(../images/aaa.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius:150px;
+
+}
+
+#ad1:hover {    
+    position: relative;
+    -webkit-animation: aaa;
+            animation: aaa;
+    -webkit-animation-duration:4s;
+            animation-duration:4s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+}
+
+@-webkit-keyframes aaa {
+    0%{left:0px; top:0px;} 
+    50%{-webkit-transform: rotate(360deg) scale(1,1);transform: rotate(360deg) scale(1,1);border-radius:150px;}
+    100%{-webkit-transform: scale(2,1.5);transform: scale(2,1.5);border-radius:10px;}
+}
+
+@keyframes aaa {
+    0%{left:0px; top:0px;} 
+    50%{-webkit-transform: rotate(360deg) scale(1,1);transform: rotate(360deg) scale(1,1);border-radius:150px;}
+    100%{-webkit-transform: scale(2,1.5);transform: scale(2,1.5);border-radius:10px;}
+}
+
+#ad2 {
+    width: 400px;
+    height: 200px;
+    color:white;
+    margin: 50px auto;
+    border-radius:10px;
+    background-image:url(../images/bbb.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#ad2:hover {
+    position: relative;
+    -webkit-animation: bbb;
+            animation: bbb;
+    -webkit-animation-duration:4s;
+            animation-duration:4s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+}
+
+@-webkit-keyframes bbb {
+    0%{left:0px; top:0px;} 
+    50%{-webkit-transform: rotatey(180deg) scale(1.5,1.5);transform: rotatey(180deg) scale(1.5,1.5); opacity:0.3}
+    100%{-webkit-transform: scale(2,2);transform: scale(2,2);}
+}
+
+@keyframes bbb {
+    0%{left:0px; top:0px;} 
+    50%{-webkit-transform: rotatey(180deg) scale(1.5,1.5);transform: rotatey(180deg) scale(1.5,1.5); opacity:0.3}
+    100%{-webkit-transform: scale(2,2);transform: scale(2,2);}
+}
+
+
+#ad3 {
+    width: 300px;
+    height: 200px;
+    color:black;
+    margin: 50px auto;
+    border-radius:10px;
+    background-image:url(../images/ccc.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#ad3:hover {
+    position: relative;
+    -webkit-animation: ccc;
+            animation: ccc;
+    -webkit-animation-duration:3s;
+            animation-duration:3s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+}
+
+@-webkit-keyframes ccc {
+    0%{left:0px; top:0px;} 
+    50%{-webkit-transform: rotate(180deg) rotatey(180deg) scale(1.5,1.5);transform: rotate(180deg) rotatey(180deg) scale(1.5,1.5);}
+    100%{-webkit-transform: scale(2,2);transform: scale(2,2);}
+}
+
+@keyframes ccc {
+    0%{left:0px; top:0px;} 
+    50%{-webkit-transform: rotate(180deg) rotatey(180deg) scale(1.5,1.5);transform: rotate(180deg) rotatey(180deg) scale(1.5,1.5);}
+    100%{-webkit-transform: scale(2,2);transform: scale(2,2);}
+}
+
+#ad4 {
+    width: 400px;
+    height: 300px;
+    color:white;
+    margin: 50px auto;
+    border-radius:10px;
+    background-image:url(../images/ddd.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#ad4:hover {
+    position: relative;
+    -webkit-animation: ddd;
+            animation: ddd;
+    -webkit-animation-duration:3s;
+            animation-duration:3s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+}
+
+@-webkit-keyframes ddd {
+    0%{left:0px; top:0px;} 
+    50%{top:-50px;-webkit-transform: skew(-30deg) scale(1.5,1.5);transform: skew(-30deg) scale(1.5,1.5);}
+    100%{top:-100px;-webkit-transform: scale(2,2);transform: scale(2,2);}
+}
+
+@keyframes ddd {
+    0%{left:0px; top:0px;} 
+    50%{top:-50px;-webkit-transform: skew(-30deg) scale(1.5,1.5);transform: skew(-30deg) scale(1.5,1.5);}
+    100%{top:-100px;-webkit-transform: scale(2,2);transform: scale(2,2);}
+}
+
+
+/*CXZ===================================
+    RESPONSIVE LAYOUT STARTS HERE
+===================================CXZ*/
+
+
+@media only screen and (max-width: 1200px) {
+    .flex-container {
+        width:100%;
+    }
+    iframe {
+        min-height:320px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .flex-container {
+        width:100%;
+
+    }
+    iframe {
+        display:none;
+    } /*PEOPLE DONT NEED 4K VIDEO ON CELL PHONE CXZ*/
+
+    .contentRight{
+        display:none;
+    }
+    .menuItem{
+        display:none;
+    }
+    
+    .labels {
+        width: 100%;
+        text-align: left;
+        padding-left: 40px;
+    }    
+    .inputs {
+        width: 100%;
+    }    
+    #ad1 {
+        display:none;
+    }
+    #ad2 {
+        display:none;
+    }
+    #ad3 {
+        display:none;
+    }
+    #ad4 {
+        display:none;
+    }
+
+    /*CXZ================================================
+        PART A: HAMBURGER MENU FOR CELL PHONE SCREEN
+    ================================================CXZ*/
+
+    #hamburger {
+        display: block;
+        float: left;
+        width: 50px;
+        height: 50px;        
+        background-image:url(../images/hamburger.png);
+        background-size: cover;
+      }
+    
+    #checkit {
+        opacity: 0;
+        position: absolute; 
+        margin-left: 2px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+      }
+    
+    #checkit:checked + ul {
+        position: absolute; 
+        margin-left: 5px;
+        margin-top:50px;
+        width: 300px;
+        height: 250px;
+        overflow: hidden;
+        /*transition: width 0.7s ease 0.3s, height 0.3s ease;*/
+        -webkit-animation: hamburger;
+                animation: hamburger;
+        -webkit-animation-duration:1s, 0.7s;
+                animation-duration:1s, 0.7s;
+        -webkit-animation-iteration-count: 1;
+                animation-iteration-count: 1;
+        -webkit-animation-direction: normal;
+                animation-direction: normal;
+        -webkit-animation-timing-function: ease;
+                animation-timing-function: ease;
+    }
+    
+    /* PART A: HAMBURGER MENU ANIMATION EFFECT CXZ*/
+    @-webkit-keyframes hamburger {    
+        0%{width:0px; height:0px; opacity:0}  
+        50%{width:0px; height:250px;}
+        100%{width:300px; height:250px; }
+      }
+    @keyframes hamburger {    
+        0%{width:0px; height:0px; opacity:0}  
+        50%{width:0px; height:250px;}
+        100%{width:300px; height:250px; }
+      }
+
+    #check_menu {
+        position: absolute; 
+        margin-left: 5px;
+        margin-top:50px;
+        border-radius:10px;
+        background-color: rgba(180, 180, 180, 0.6);
+        width: 0px;
+        height: 0px;
+        overflow: hidden;
+        -webkit-transition: height 0.3s ease 0.7s, width 0.7s ease;
+        -o-transition: height 0.3s ease 0.7s, width 0.7s ease;
+        transition: height 0.3s ease 0.7s, width 0.7s ease;
+    }
+    
+    #check_menu li {
+        width: 70%;
+        background: -webkit-gradient(linear, left top, left bottom, from(green), to(lightgrey));
+        background: -webkit-linear-gradient(green, lightgrey);
+        background: -o-linear-gradient(green, lightgrey);
+        background: linear-gradient(green, lightgrey);
+        padding: 10px;
+        margin:18px;
+        border-radius:5px;        
+        list-style-type: none;
+        -webkit-transition: background 1s, font-size 1s, -webkit-transform 1s;
+        transition: background 1s, font-size 1s, -webkit-transform 1s;
+        -o-transition: transform 1s, background 1s, font-size 1s;
+        transition: transform 1s, background 1s, font-size 1s;
+        transition: transform 1s, background 1s, font-size 1s, -webkit-transform 1s;
+    }
+
+    #check_menu li:hover{
+        background: yellowgreen; 
+        -webkit-transform: scale(1.2, 1.2); 
+            -ms-transform: scale(1.2, 1.2); 
+                transform: scale(1.2, 1.2);        
+    }
+
+}
